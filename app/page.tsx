@@ -1,9 +1,11 @@
-import Image from 'next/image'
+import Header from './components/common/Header';
+import Sidebar from './components/common/Sidebar';
 
 export default function Home() {
   return (
     <div>
-      App
+      <Header/>
+      <Sidebar/>
     </div>
   )
 }
