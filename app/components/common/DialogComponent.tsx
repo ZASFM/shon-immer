@@ -2,31 +2,20 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import {HiOutlineXMark} from 'react-icons/hi2';
 
-export default function DialogComponent() {
-  let [isOpen, setIsOpen] = useState(true)
+type DialogComponentProps={
+  isVisible:boolean,
+  onClose:()=>void,
+  children:React.ReactNode
+}
 
-  function closeModal() {
-    setIsOpen(false)
-  }
-
-  function openModal() {
-    setIsOpen(true)
-  }
+export default function DialogComponent(
+  {isVisible,onClose,children}:DialogComponentProps
+) {
 
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={openModal}
-          className="rounded-md bg-black/20 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
-        >
-          Open dialog
-        </button>
-      </div>
-
-      <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+      <Transition appear show={isVisible} as={Fragment}>
+        <Dialog as="div" className="fixed inset-0 z-10" onClose={onClose}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -36,11 +25,11 @@ export default function DialogComponent() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/25" />
+            <div className="fixed inset-0 bg-slate-300 bg-opacity-75" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex flex-col w-64 h-full bg-white relative z-10">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -51,14 +40,16 @@ export default function DialogComponent() {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="overflow-y-auto flex-1 transition-all">
-                   <div>
-                     <button className='p-2 rounded-full bg-gray-200 text-gray-500 hover:bg-green-200 hover:text-green-600'>
+                   <div className='flex justify-end mt-3'>
+                     <button className='p-2 rounded-full outline-none bg-gray-200 text-gray-500 hover:bg-green-200 hover:text-green-600' onClick={onClose}>
                         <HiOutlineXMark size={28} className='cursor-pointer'/>
                      </button>
                    </div>
+                   {children }
                 </Dialog.Panel>
               </Transition.Child>
             </div>
+
           </div>
         </Dialog>
       </Transition>
