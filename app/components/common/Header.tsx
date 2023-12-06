@@ -1,15 +1,19 @@
 "use client"
 
+import { useSidebarDrawer } from '@/lib/store';
 import Link from 'next/link';
 import {HiBars3, HiOutlineShoppingCart} from 'react-icons/hi2';
 
 const Header=()=>{
+
+   const {onSidebarOpen}=useSidebarDrawer();
+
    return (
       <header className="grid grid-cols-2 py-5 px-4 md:px-12 items-center sticky top-0 z-10 bg-white">
          {/*  left part */}
          <div className="flex items-center gap-x-8">
             <button className="p-2 rounded-full text-slate-200 text-gray-500 hover:bg-green-200 hover:text-green-600">
-               <HiBars3 size={28} className="cursor-pointer shrink-0"/>
+               <HiBars3 size={28} className="cursor-pointer shrink-0" onClick={onSidebarOpen}/>
             </button>
             <button>
                Location
