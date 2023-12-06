@@ -9,6 +9,7 @@ import { MdHelp } from "react-icons/md";
 import { FaReceipt } from "react-icons/fa";
 import { HiHome, HiOutlineArrowRightOnRectangle } from "react-icons/hi2";
 import React from "react";
+import { useSidebarDrawer } from "@/lib/store";
 
 const Links = [
   { title: "Home", icon: HiHome, url: "/" },
@@ -18,15 +19,12 @@ const Links = [
 ];
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
 
-  const closeModal = () => {
-    setIsOpen((preVal) => !preVal);
-  };
+   const {isSidebarOpen, onSidebarClose}=useSidebarDrawer();
 
   return (
     <div>
-      <DialogComponent isVisible={isOpen} onClose={closeModal}>
+      <DialogComponent isVisible={isSidebarOpen} onClose={onSidebarClose}>
         <div className="flex flex-col px-6 py-6 gap-y-6">
           <div className="flex justify-center my-3">
             <Link href="/" className="outline-none">
