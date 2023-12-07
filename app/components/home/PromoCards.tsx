@@ -8,7 +8,7 @@ type PromoCardProps = {
 const PromoCards = ({ promo }: PromoCardProps) => {
   return (
     <article
-      className="flex w-96 rounded-lg shrink-0  shadow-lg text-gray-500 hover:bg-green-200 hover:text-green-600 transition-all duration-200 ease-out"
+      className="flex w-96 rounded-lg shrink-0 shadow-lg text-gray-500 hover:bg-green-200 hover:text-green-600 transition-all duration-200 ease-out"
     >
       <div className="flex flex-1 relative overflow-hidden">
         <span
