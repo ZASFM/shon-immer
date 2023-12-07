@@ -9,6 +9,7 @@ export const categoriesData = [
      desc: "Juicy, flavorful patties served in a bun with various toppings and condiments.",
      id: "cln3677fn00016uls4vp6dhx1",
      imageSrc: "/img/categories/pizza.png",
+     title:"Pizza"
    },
    {
      desc: "Italian classics featuring various pasta shapes paired with rich sauces and ingredients.",
