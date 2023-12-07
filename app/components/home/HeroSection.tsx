@@ -14,7 +14,7 @@ const HeroSection = () => {
        <div className="absolute bottom-3 left-40">
            <div className="flex flex-col">
                <div>
-                   <h1>DPS Resto</h1>
+                   <h1>Shafi Giovanno</h1>
                </div>
                <div className="flex items-center">
                    <HiStar/>
