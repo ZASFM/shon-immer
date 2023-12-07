@@ -8,3 +8,13 @@ export type PromoTypes={
    price: number,
 }
 
+export type MenuTypes={
+   id: string,
+   title: string,
+   shortDescr: string,
+   longDescr: string,
+   price: number,
+   image: string,
+   category: string,
+   prepType: string[],
+}
