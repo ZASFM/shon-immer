@@ -3,7 +3,7 @@ import MenuModal from "./MenuModal";
 
 const MenuSection = () => {
   return (
-    <section className="mb-24">
+    <section className="mb-24 mt-16">
       <div className="max-w-2xl my-5 mx-auto text-center">
         <h1 className="text-3xl leading-tight tracking-tight text-gray-600 md:text-4xl">
           Our Menus for you
