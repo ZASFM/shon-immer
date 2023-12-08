@@ -1,7 +1,9 @@
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+
 const FavoritesBtn=()=>{
    return (
-      <div>
-         FavoritesBtn
+      <div className="relative hover:opacity-80 transition">
+         <AiOutlineHeart className="text-green-700 -top-[20px] -right-[30px] cursor-pointer"/>
       </div>
    )
 }
