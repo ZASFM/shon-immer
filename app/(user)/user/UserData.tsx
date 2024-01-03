@@ -11,7 +11,7 @@ const UserData=()=>{
          </div>
          <Link
             href="/user/favorites"
-            className="flex items-center space-between p-2 text-gray-500"
+            className="flex items-center justify-between p-2 text-gray-500"
          >
             <div className="flex items-center">
               <AiOutlineHeart size={28} className="mr-3" />
