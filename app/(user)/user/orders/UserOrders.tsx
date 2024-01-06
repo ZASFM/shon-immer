@@ -1,3 +1,5 @@
+/*////////////////////////Required Prisma types//////////////////////////////////// */
+
 "use client"
 
 import Container from "@/app/components/common/Container";
@@ -84,7 +86,7 @@ const UserOrders = () => {
               ) : (
                 <UserOnDeliveryModal order={order} />
               )}
-              <div className="flex justify-between items-center p-1 text-slate-500 bg-slate-500">
+              <div className="flex justify-between items-center p-1 text-slate-500 bg-slate-100">
                 <div className="flex items-center space-x-1 ">
                   <CiReceipt size={28} />
                   <div className="flex flex-col text-xs">
