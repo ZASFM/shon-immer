@@ -1,5 +1,5 @@
 import Container from "@/app/components/common/Container";
-import UserOrders from "./userOrders";
+import UserOrders from "./UserOrders";
 
 const Orders=async()=>{
    return (

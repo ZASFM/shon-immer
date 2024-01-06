@@ -1,8 +1,10 @@
+/*////////////////////////Required Prisma types//////////////////////////////////// */
+
 import Modal from "@/app/components/common/Modal";
 import { useState } from "react";
 import { BsFillBoxFill } from "react-icons/bs";
 import { FaChevronRight } from "react-icons/fa";
-import { Order } from "./userOrders";
+import { Order } from "./UserOrders";
 import Image from "next/image";
 
 type UserDeliveredModalProps={
