@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import CartList from "./CartList";
+import LocationBtn from "../components/common/LocationBtn";
 
 const CartSummary = () => {
   const [subTotal, setSubtotal] = useState(21);
@@ -22,7 +23,7 @@ const CartSummary = () => {
             <div className="border-t border-gray-200 py-4">
               <h2 className="text-lg leading-6 my-4 font-medium text-gray-900">
                 Address
-                <div>Location</div>
+                <LocationBtn/>
               </h2>
             </div>
           </div>
