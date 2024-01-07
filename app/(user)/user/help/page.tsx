@@ -2,11 +2,11 @@ import HelpRequestForm from "./HelpRequestForm";
 
 const HelpPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center space-y-8   my-24">
+    <div className="flex flex-col items-center justify-center space-y-8 my-24">
       <div>
-        <h2 className="text-2xl ">Get Support</h2>
+        <h2 className="text-2xl">Get Support</h2>
       </div>
-      <div className="w-full rounded-lg p-6  shadow-xl max-w-md   ">
+      <div className="w-full rounded-lg p-6 shadow-xl max-w-md">
         <HelpRequestForm />
       </div>
     </div>
