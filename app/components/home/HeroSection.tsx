@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { HiStar } from 'react-icons/hi2'
+import RestaurantDetailsModal from './RestaurantDetailsModal'
 
 const HeroSection = () => {
    const bannerImg = "/img/banner.jpg"
@@ -21,7 +22,7 @@ const HeroSection = () => {
                    <p className="mx-1">4.5 rating</p>
                </div>
                <div>
-                   More info
+                   <RestaurantDetailsModal/>
                </div>
            </div>
        </div>
