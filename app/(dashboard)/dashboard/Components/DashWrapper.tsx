@@ -13,7 +13,7 @@ const DashWrapper=({children}:DashWrapper)=>{
    const showSideBar=()=>setShow(preVal=>!preVal);
 
    return (
-      <div className="min-h-screen bg-slate-500">
+      <div className="min-h-screen bg-slate-100">
          <DashSideBar show={show} setShow={showSideBar}/>
          <section className={`relative ml-[6.5rem] transition-all duration-100 ease-out ${show && "md:ml-[10rem]"}`}>
             <DashHeader/>
