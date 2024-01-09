@@ -1,8 +1,10 @@
+import Container from "@/app/components/common/Container";
+
 const Dashboard=()=>{
    return (
-      <div>
+      <Container>
          Dashboard
-      </div>
+      </Container>
    )
 }
 
