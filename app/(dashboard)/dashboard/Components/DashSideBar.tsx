@@ -19,9 +19,7 @@ const DashSideBar = ({ show, setShow }: Props) => {
       }`}
     >
       <HiChevronDoubleLeft
-        className={`bg-green-600  hidden md:block
-       rounded-full text-white shadow-lg
-       absolute -right-3 top-9 z-10 cursor-pointer 
+        className={`bg-green-600  hidden md:block rounded-full text-white shadow-lg absolute -right-3 top-9 z-10 cursor-pointer 
         ${!show && "rotate-180"}`}
         size={32}
         onClick={setShow}
