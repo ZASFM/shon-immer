@@ -35,7 +35,7 @@ const RestaurantDetailsModal = () => {
           </div>
           <div className="flex items-center ">
             <HiMapPin className="shrink-0 mr-2" size={26} />
-            <span>27 BrickField Road, Darwin , Australia </span>
+            <span> KFC Hamburg Hbh </span>
           </div>
 
           <Disclosure as="div" className="mt-2">
