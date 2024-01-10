@@ -18,3 +18,7 @@ export type MenuTypes={
    category: string,
    prepType: string[],
 }
+
+export type PrismaUser={
+   
+}
