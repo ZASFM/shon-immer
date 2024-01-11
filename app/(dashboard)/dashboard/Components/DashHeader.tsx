@@ -2,7 +2,6 @@ import Container from "@/app/components/common/Container";
 import Image from "next/image";
 import NotifyDropDown from "./NotifyDropDown";
 import AccountDropDown from "@/app/components/common/AccountDropDown";
-import { User } from "@/app/(user)/user/orders/UserOrders";
 
 const DashHeader=()=>{
    return (
