@@ -1,8 +1,12 @@
+/*/////////////////////////Required Prisma client type for user///////////////////////*/
+
 "use client";
 
 import Image from "next/image";
 import TableWrapper from "../Components/TableWrapper";
 import { UsersData } from "@/data/UsersData";
+import { User } from "@/app/(user)/user/orders/UserOrders";
+import EditRoleModal from "./EditRoleModal";
 
 const AdminUserTable = () => {
   return (
@@ -46,7 +50,7 @@ const AdminUserTable = () => {
               <td className="px-6 py-2">{user.email} </td>
               <td className="px-6 py-2">{user.role}</td>
               <td className="px-6 py-2 whitespace-nowrap">
-
+                 <EditRoleModal user={user}/>
               </td>
             </tr>
           ))}
