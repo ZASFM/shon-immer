@@ -19,6 +19,10 @@ export type MenuTypes={
    prepType: string[],
 }
 
-export type PrismaUser={
-   
+export type User={
+   id:string,
+   email:string,
+   name:string,
+   img:string,
+   role:string
 }
