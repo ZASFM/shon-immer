@@ -3,6 +3,9 @@
 import { HiOutlineSearch, HiOutlineUpload } from "react-icons/hi";
 import { usePathname } from "next/navigation";
 import OrdersFilter from "../orders/OrdersFilter";
+import AdminAddMenu from "../menu/AdminAddMenu";
+import PriceDropDown from "../menu/PriceDropDown";
+import CategoryDropDown from "../menu/CategoryDropDown";
 
 const SearchAndFilter = () => {
   const pathname = usePathname();
@@ -32,7 +35,7 @@ const SearchAndFilter = () => {
         {pathname === "/dashboard/menu" && (
           <>
             <div className="flex items-center space-x-3 w-full md:w-auto">
-
+              <AdminAddMenu />
             </div>
             <div className="flex items-center space-x-3 w-full md:w-auto">
               <button
@@ -44,10 +47,10 @@ const SearchAndFilter = () => {
               </button>
             </div>
             <div className="flex items-center space-x-3 w-full md:w-auto">
-
+          <PriceDropDown />
         </div>
         <div className="flex items-center space-x-3 w-full md:w-auto">
-
+          <CategoryDropDown />
         </div>
           </>
         )}
