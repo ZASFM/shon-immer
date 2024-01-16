@@ -1,6 +1,11 @@
+import Container from "@/app/components/common/Container";
+import AdminMenuTable from "./AdminMenuTable";
+
 const MenuPage=()=>{
    return (
-      <div>page</div>
+      <Container>
+         <AdminMenuTable/>
+      </Container>
    )
 }
 
