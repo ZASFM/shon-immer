@@ -3,7 +3,7 @@ export const NotifyData = [
      id: 1,
      type: "Signup",
      opened: true,
-     time: "10/6/2022",
+     time: "10/01/2024",
      message: "Order #ORD213456 has been delivered by Sam to Maria",
      link: "/dashboard/notifications"
    },
