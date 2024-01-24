@@ -26,3 +26,10 @@ export type User={
    img:string,
    role:string
 }
+
+export type Category={
+   desc: string,
+   id: string,
+   category: string,
+   imageSrc: string
+}

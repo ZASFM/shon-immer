@@ -7,6 +7,7 @@ import AdminEditCategory from "./AdminEditCategory";
 import AdminDeleteCategory from "./AdminDeleteCategory";
 
 import { categoriesData } from "@/data/categories-data";
+import { Category } from "@/types";
 
 const AdminCategories = () => {
   return (
@@ -55,7 +56,7 @@ const AdminCategories = () => {
               <td className="px-6 py-2">{cat.desc}</td>
 
               <td className="px-6 py-2 whitespace-nowrap">
-                <AdminEditCategory cat={cat as any} />
+                <AdminEditCategory cat={cat as any as Category} />
               </td>
               <td className="px-6 py-2 whitespace-nowrap">
                 <AdminDeleteCategory  />

@@ -7,9 +7,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Modal from "@/app/components/common/Modal";
 import UploadImg from "../Components/UploadImg";
+import { Category } from "@/types";
 
+type AdminEditCategoryProps={
+   cat: any
+}
 
-const AdminEditCategory = ({ cat }: any) => {
+const AdminEditCategory = ({ cat }: AdminEditCategoryProps) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState(cat.title);
