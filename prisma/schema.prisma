@@ -44,7 +44,77 @@ model User {
   updatedAt     DateTime  @updatedAt
   accounts      Account[]
   sessions      Session[]
+  role          Role      @default(USER)
+  profile       Profile?
+  order         Order[]
+  favorite      Favorite?
 }
+
+model Profile {
+  id    String  @id @default(cuid())
+  phone String?
+  img   String?
+  name  String?
+  email String  @unique
+  user  User    @relation(fields: [email], references: [email])
+}
+
+enum Role {
+  USER
+  ADMIN
+  DELIVERY
+}
+
+model Menu {
+  id           String   @id @default(cuid())
+  title        String
+  shortDesc    String
+  longDesc     String?
+  price        Float
+  sellingPrice Float?
+  image        String
+  prepType     String[]
+  onPromo      Boolean  @default(false)
+  category     String
+}
+
+model category {
+  id    String @id @default(cuid())
+  title String @unique
+  desc  String
+  img   String
+}
+
+enum OrderStatus {
+  PREPARING
+  UNASSIGNED
+  COLLECTED
+  DELIVERED
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  orderNumber     String      @unique
+  cart            Json[]
+  orderDate       DateTime    @default(now())
+  deliveryTime    DateTime?   @default(now())
+  userName        String
+  userEmail       String // To be used to filter orders that belong to the customer
+  user            User        @relation(fields: [userEmail], references: [email])
+  userPhone       String
+  paymentToken    String? // For payment verifications
+  paid            Boolean     @default(false)
+  delivery        Delivery?
+  deliveryAddress String
+  deliveryFee     Float       @default(4)
+  serviceFee      Float       @default(3)
+  status          OrderStatus @default(PREPARING)
+  note            String?
+  discount        Float?
+  total           Float
+}
+
+
 
 model VerificationRequest {
   id         String   @id @default(cuid())
