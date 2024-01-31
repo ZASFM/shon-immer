@@ -114,43 +114,43 @@ model Order {
   total           Float
 }
 
-model Delivery{
-  id String @id @default(cuid())
-  deliverName String
+model Delivery {
+  id           String @id @default(cuid())
+  deliverName  String
   deliverPhone String
   deliverEmail String
-  order Order @relation(fields: [orderNum], references: [orderNumber])
-  orderNum String @unique
+  order        Order  @relation(fields: [orderNum], references: [orderNumber])
+  orderNum     String @unique
 }
 
-model Favorite{
-  id String @id @default(cuid())
-  user User @relation(fields: [userEmail], references: [email])
-  userEmail String @unique
-  menur String[]
+model Favorite {
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userEmail], references: [email])
+  userEmail String   @unique
+  menur     String[]
 }
 
-model Restaurant{
-  id String @id @default(cuid())
-  name String
-  address String @default("Hachmannplatz 13, 20099 Hamburg")
-  openTimes Json[]
-  deliveryFee Float @default(4)
-  serviceFee Float @default(3)
-  bannerImg String
-  rating Float @default(4.5)
+model Restaurant {
+  id          String @id @default(cuid())
+  name        String
+  address     String @default("Hachmannplatz 13, 20099 Hamburg")
+  openTimes   Json[]
+  deliveryFee Float  @default(4)
+  serviceFee  Float  @default(3)
+  bannerImg   String
+  rating      Float  @default(4.5)
 }
 
-model Notification{
-  id String @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @default(now())
-  type String
-  message String
-  status notifyStatus @default(UNREAD)
+model Notification {
+  id        String       @id @default(cuid())
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @default(now())
+  type      String
+  message   String
+  status    notifyStatus @default(UNREAD)
 }
 
-enum notifyStatus{
+enum notifyStatus {
   READ
   UNREAD
 }
