@@ -15,7 +15,7 @@ export default function AccountDropDown({user}:{user:User}) {
         <div>
           <Menu.Button className="bg-slate-200 p-1  rounded-full text-gray-500 hover:bg-green-200 hover:text-green-600">
             <Image
-              src="/img/logo.png"
+              src={user.image}
               alt="avatar"
               width={30}
               height={30}
@@ -48,7 +48,7 @@ export default function AccountDropDown({user}:{user:User}) {
                     height={30}
                     className=" object-cover bg-white  rounded-full  dark:bg-slate-600"
                   />
-                  <span className="pl-4 ">{}Shafi </span>
+                  <span className="pl-4 ">{}{user.name} </span>
                 </div>
               </Menu.Item>
               <Menu.Item>

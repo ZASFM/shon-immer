@@ -41,7 +41,7 @@ const Header = ({ user }: HeaderProps) => {
             0
           </span>
         </Link>
-        {user ? (
+        {/*user ?( 
           <AccountDropDown user={user as User} />
         ) : (
           <button
@@ -50,7 +50,13 @@ const Header = ({ user }: HeaderProps) => {
           >
             Login/Signup
           </button>
-        )}
+        )*/}
+        <button
+          className="bg-slate-200 text-gray-500 px-4 py-1 rounded-full"
+          onClick={onOpen}
+        >
+          Login/Signup
+        </button>
       </div>
     </header>
   );
