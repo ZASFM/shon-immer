@@ -5,8 +5,8 @@ import { MenuData } from "@/data/menu-data";
 import Link from "next/link";
 import { HiOutlineChevronLeft } from "react-icons/hi2";
 import FavoriteModal from "./FavoriteModal";
-import { Menu } from "@prisma/client";}
-import { MenuTypes } from "@/types";}
+import { Menu } from "@prisma/client";
+import { MenuTypes } from "@/types";
 
 const FavoriteSection = () => {
   return (
