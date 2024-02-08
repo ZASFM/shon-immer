@@ -11,3 +11,15 @@ export const useSidebarDrawer=create<SidebarDrawerStore>()((set)=>({
    onSidebarOpen:()=>set({isSidebarOpen:true}),
    onSidebarClose:()=>set({isSidebarOpen:false})
 }))
+
+interface LoginModalStore{
+   isOpen:boolean,
+   onOpen:()=>void,
+   onClose:()=>void
+}
+
+export const useLoginModalStore=create<LoginModalStore>()((set)=>({
+   isOpen:false,
+   onOpen:()=>set({isOpen:true}),
+   onClose:()=>set({isOpen:false})
+}))
