@@ -7,13 +7,14 @@ import { HiChevronDown } from "react-icons/hi2";
 import Modal from "@/app/components/common/Modal";
 import FavoritesBtn from "@/app/components/common/FavotriteBtn";
 import FavoriteCard from "./FavoriteCard";
+import { Menu } from "@prisma/client";
 
 type Props = {
-  favorite: Favorite;
-  user: User;
+  favorite: Menu;
+  //user: User;
 };
 
-const FavoriteModal = ({ favorite, user }: Props) => {
+const FavoriteModal = ({ favorite }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [prepare, setPrepare] = useState("");
   const [instructions, setInstructions] = useState("");
