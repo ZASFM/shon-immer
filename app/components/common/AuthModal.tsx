@@ -1,6 +1,7 @@
 import { useLoginModalStore } from "@/lib/store";
 import Modal from "./Modal";
 import Image from "next/image";
+import LoginComponent from "./LoginComponent";
 
 const AuthModal=()=>{
    const {isOpen, onClose}=useLoginModalStore();
@@ -14,6 +15,7 @@ const AuthModal=()=>{
            height={75}
            className="mx-auto mb-12"
          />
+         <LoginComponent/>
       </Modal>
    )
 }

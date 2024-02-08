@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <div>
       <Header user={user as User}/>
-      <Sidebar/>
+      <Sidebar user={user as User}/>
       <HeroSection/>
       <Promos/>
       <Categories/>
