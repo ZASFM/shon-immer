@@ -8,7 +8,7 @@ const AuthModal=()=>{
    return (
       <Modal isOpen={isOpen} closeModal={onClose}>
          <Image
-           src="./img/logo.png"
+           src="/img/logo.png"
            alt="logo"
            width={75}
            height={75}

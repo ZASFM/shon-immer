@@ -6,8 +6,9 @@ import {
   HiOutlineUserPlus,
 } from "react-icons/hi2";
 import Image from "next/image";
+import { User } from "@prisma/client";
 
-export default function AccountDropDown() {
+export default function AccountDropDown({user}:{user:User}) {
   return (
     <div className="">
       <Menu as="div" className="relative inline-block text-left">

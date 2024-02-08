@@ -62,7 +62,7 @@ const FavoriteModal = ({ favorite }: Props) => {
                   />
                 </Disclosure.Button>
                 <Disclosure.Panel className="px-4 pt-4 pb-2 ">
-                  {favorite.prepType?.map((prep, index) => (
+                  {favorite.prepType?.map((prep:string, index:number) => (
                     <div key={index} className="flex my-2">
                       <input
                         checked={prepare === prep}

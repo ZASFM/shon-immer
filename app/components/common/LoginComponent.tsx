@@ -2,7 +2,7 @@
 
 import { ClientSafeProvider, getProviders, signIn } from "next-auth/react";
 import { useEffect, useState } from "react";
-import { BsFacebook, BsGoogle } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 
 const LoginComponent = () => {
