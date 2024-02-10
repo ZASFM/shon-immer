@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import React, { createElement, useState } from "react";
 import DialogComponent from "./DialogComponent";
-import Link from "next/link";
-import Image from "next/image";
 import { BsHeartFill } from "react-icons/bs";
 import { MdHelp } from "react-icons/md";
 import { FaReceipt } from "react-icons/fa";
 import { HiHome, HiOutlineArrowRightOnRectangle } from "react-icons/hi2";
-import React from "react";
-import { useSidebarDrawer } from "@/lib/store";
+import Link from "next/link";
+import Image from "next/image";
 import { User } from "@prisma/client";
+import { signOut } from "next-auth/react";
+import { useLoginModalStore, useSidebarDrawer } from "@/lib/store";
 
 const Links = [
   { title: "Home", icon: HiHome, url: "/" },
@@ -21,13 +21,23 @@ const Links = [
 
 const Sidebar = ({ user }: { user: User }) => {
   const { isSidebarOpen, onSidebarClose } = useSidebarDrawer();
+  const {onOpen}=useLoginModalStore();
+
+  //function closes sidebar and open the modal with the auth options
+  const showLoginComponent=()=>{
+    onSidebarClose();
+    onOpen();
+  }
 
   return (
     <div>
       <DialogComponent isVisible={isSidebarOpen} onClose={onSidebarClose}>
         <div className="flex flex-col px-6 py-6 gap-y-6">
           {/* 
-                {user ? (
+          complete version:
+    <DialogComponent isVisible={isSideBarOpen} onClose={onSideBarClose}>
+      <div className="flex flex-col gap-y-6 px-6 pt-8">
+        {user ? (
           <>
             <div className="flex justify-center my-3">
               <Link href="/" className="outline-none">
@@ -81,6 +91,21 @@ const Sidebar = ({ user }: { user: User }) => {
             Login / Signup
           </button>
         )}
+
+        <div className="flex flex-col border-t ">
+          {user?.role === "ADMIN" && (
+            <div className="mt-5">
+              <Link
+                href="/dashboard"
+                className="bg-green-600  text-white text-center hover:bg-green-200  hover:text-green-700  p-3 rounded "
+              >
+                Go to Dashboard
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>
+    </DialogComponent>
         */}
           <div className="flex justify-center my-3">
             <Link href="/" className="outline-none">
