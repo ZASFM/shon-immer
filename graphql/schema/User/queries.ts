@@ -1,5 +1,5 @@
 import { Role } from "@prisma/client";
-import { builder } from "../builder";
+import { builder } from "../../builder";
 import { GraphQLError } from "graphql";
 
 builder.prismaObject("User",{
