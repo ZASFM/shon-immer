@@ -20,7 +20,7 @@ const validateGraphApiKey=(request:NextRequest):boolean=>{
 //context creator from Next.js API or GraphQL routes
 export const createContext=async({req}:{req:NextRequest})=>{
    //check that the api key in present:
-   if(!validateGraphApiKey(req)) throw new Error("Unauthorized");
+   if(!validateGraphApiKey(req)) throw new Error("hihihihhih");
    const session=await getServerSession();
 
    //if there if no session return {}
